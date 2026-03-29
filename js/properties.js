@@ -112,7 +112,7 @@ const PROPERTIES = [
     ],
     description: "A colonial two-story on a massive 6.4-acre parcel within city limits. Main floor features living room, eat-in kitchen, laundry, 3 bedrooms and 2 bathrooms. Second floor has kitchenette, bathroom, and 2 additional bedrooms. Sits on approximately 1 acre with 5.4 additional wooded acres adjacent to City Garden and schools. Sold AS IS — a once-in-a-generation canvas for community development.",
     mission: "Planned as Herington's premier community event center — hosting affordable weddings, nonprofit fundraisers, youth programs, and seasonal farmers markets on the 6-acre grounds.",
-    image: "https://cdn.peterpan.net/images/properties/herington-200-kansas/1.webp",
+    image: "/images/properties/herington-200-kansas/1.jpg",
     includedParcels: [
       { address: "200 Blk E Logan Ave, Herington", use: "Adjacent Land (1 acre)", sqft: 43560, assessed: 3030, legal: "CALKINS ADD TO HERINGTON, S01, T16, R04, BLOCK 2, Lot 15-18" }
     ],
@@ -152,14 +152,14 @@ const PROPERTIES = [
     ],
     description: "A beautiful limestone church building with great potential. Built in 1942, 337 W 7th St features stunning wood vaulted ceilings, original stained glass windows in the sanctuary, a full kitchen, and multiple multipurpose rooms throughout. The large fenced exterior area offers extra security for outdoor activities. Located minutes from Fort Riley, it serves a community with deep military roots and ongoing need for family services.",
     mission: "Envisioned as a Veteran & Family Resource Center providing support services, community gathering space, and cultural programs for the Fort Riley military community.",
-    image: "https://cdn.peterpan.net/images/properties/junction-city-337/1.webp",
+    image: "/images/properties/junction-city-337/1.jpg",
     gallery: [
-      "https://cdn.peterpan.net/images/properties/junction-city-337/1.webp",
-      "https://cdn.peterpan.net/images/properties/junction-city-337/2.webp",
-      "https://cdn.peterpan.net/images/properties/junction-city-337/3.webp",
-      "https://cdn.peterpan.net/images/properties/junction-city-337/4.webp",
-      "https://cdn.peterpan.net/images/properties/junction-city-337/5.webp",
-      "https://cdn.peterpan.net/images/properties/junction-city-337/6.webp"
+      "/images/properties/junction-city-337/1.jpg",
+      "/images/properties/junction-city-337/2.jpg",
+      "/images/properties/junction-city-337/3.jpg",
+      "/images/properties/junction-city-337/4.jpg",
+      "/images/properties/junction-city-337/5.jpg",
+      "/images/properties/junction-city-337/6.jpg"
     ],
     category: "community",
     highlight: true
