@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grant Strategy — Peterpan Corp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=8">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .grant-card{background:#fff;border-radius:12px;padding:24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.06);border-left:4px solid var(--green-600)}
+    .grant-card.federal{border-left-color:#2563eb}
+    .grant-card.military{border-left-color:#7c3aed}
+    .grant-card.historic{border-left-color:#d97706}
+    .grant-card.foundation{border-left-color:#dc2626}
+    .grant-card h3{font-family:'Inter',sans-serif;font-size:1.1rem;margin-bottom:6px}
+    .grant-card .agency{font-size:0.8rem;color:#64748b;margin-bottom:10px}
+    .grant-card .amount{display:inline-block;background:#ecfdf5;color:#047857;padding:3px 10px;border-radius:100px;font-size:0.8rem;font-weight:600;margin-right:8px}
+    .grant-card.federal .amount{background:#dbeafe;color:#2563eb}
+    .grant-card.military .amount{background:#ede9fe;color:#7c3aed}
+    .grant-card.historic .amount{background:#fef3c7;color:#92400e}
+    .grant-card.foundation .amount{background:#fee2e2;color:#dc2626}
+    .grant-card p{font-size:0.9rem;line-height:1.6;margin-top:8px}
+    .grant-card .targets{font-size:0.82rem;color:#475569;margin-top:8px;padding-top:8px;border-top:1px solid #f1f5f9}
+    .priority-table{width:100%;border-collapse:collapse;margin:16px 0}
+    .priority-table th,.priority-table td{padding:10px 14px;text-align:left;font-size:0.85rem;border-bottom:1px solid #e2e8f0}
+    .priority-table th{background:#f1f5f9;font-weight:600;color:#334155;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.5px}
+    .tier{display:inline-block;padding:2px 10px;border-radius:100px;font-size:0.75rem;font-weight:600}
+    .tier-1{background:#dcfce7;color:#166534}
+    .tier-2{background:#dbeafe;color:#1e40af}
+    .tier-3{background:#fef3c7;color:#92400e}
+    .action-step{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid #f1f5f9}
+    .action-num{width:28px;height:28px;background:var(--green-700);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/logo.svg?v=8" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+        <div class="logo-text">Peterpan Corp.<span>Nonprofit &bull; Est. Kansas</span></div>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/properties.html">Properties</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:48px 0 56px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-file-invoice-dollar"></i> Strategic Plan</div>
+        <h1>Grant & Funding Strategy</h1>
+        <p>Master plan for securing grants, tax credits, and funding across Peterpan Corp's 18-property Kansas portfolio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-narrow">
+
+      <!-- Priority Matrix -->
+      <div class="section-header" style="text-align:left;">
+        <div class="section-label">Priority Matrix</div>
+        <h2>Funding Priorities by Tier</h2>
+      </div>
+
+      <h3 style="margin:24px 0 12px;"><span class="tier tier-1">TIER 1</span> &mdash; Pursue Immediately</h3>
+      <table class="priority-table">
+        <thead><tr><th>Program</th><th>Target Properties</th><th>Est. Funding</th></tr></thead>
+        <tbody>
+          <tr><td>KHRC CHDO + HOME Funds</td><td>Herington houses, Abilene</td><td><strong>$300K–$500K</strong></td></tr>
+          <tr><td>USDA Community Facilities</td><td>Abilene daycare, Hope community bldg</td><td><strong>$200K–$2M</strong></td></tr>
+          <tr><td>Federal + State Historic Tax Credits</td><td>Emporia, Hutchinson, Junction City</td><td><strong>20-25% of rehab</strong></td></tr>
+          <tr><td>CDBG (via municipalities)</td><td>Herington housing rehab</td><td><strong>$250K–$500K</strong></td></tr>
+          <tr><td>Emporia Main Street (IWW/ROOMS)</td><td>Emporia downtown building</td><td><strong>$5K–$25K</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:24px 0 12px;"><span class="tier tier-2">TIER 2</span> &mdash; High Value (More Preparation)</h3>
+      <table class="priority-table">
+        <thead><tr><th>Program</th><th>Target Properties</th><th>Est. Funding</th></tr></thead>
+        <tbody>
+          <tr><td>LIHTC (9% or 4% credits)</td><td>Abilene church conversion, Herington</td><td><strong>$500K–$2M+ equity</strong></td></tr>
+          <tr><td>OLDCC (military community)</td><td>Junction City, Ogden</td><td><strong>$100K–$1M</strong></td></tr>
+          <tr><td>Kansas Children's Cabinet</td><td>Abilene daycare facility</td><td><strong>$50K–$250K</strong></td></tr>
+          <tr><td>Heritage Trust Fund</td><td>Hutchinson Victorian, JC church</td><td><strong>$5K–$90K</strong></td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="margin:24px 0 12px;"><span class="tier tier-3">TIER 3</span> &mdash; Foundation / Supplemental</h3>
+      <table class="priority-table">
+        <thead><tr><th>Program</th><th>Target Properties</th><th>Est. Funding</th></tr></thead>
+        <tbody>
+          <tr><td>Kansas Health Foundation</td><td>Community health spaces</td><td><strong>$25K–$200K</strong></td></tr>
+          <tr><td>Sunflower Foundation</td><td>Wellness/childcare facilities</td><td><strong>$10K–$200K</strong></td></tr>
+          <tr><td>National Trust Preservation Fund</td><td>Historic property assessments</td><td><strong>$2.5K–$5K</strong></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Immediate Actions -->
+      <div class="section-header" style="text-align:left;margin-top:48px;">
+        <div class="section-label">Action Plan</div>
+        <h2>7 Immediate Steps</h2>
+      </div>
+
+      <div class="action-step"><div class="action-num">1</div><div><strong>Obtain CHDO Certification</strong> from KHRC — unlocks set-aside HOME funds ($300K–$500K). Requires affordable housing mission, low-income board representation, and capacity demonstration.</div></div>
+      <div class="action-step"><div class="action-num">2</div><div><strong>Commission National Register Evaluations</strong> for Hutchinson Victorian (1894), Junction City limestone church (1942), Emporia downtown building, and Abilene former church (1916). Unlocks 20-25% Historic Tax Credits.</div></div>
+      <div class="action-step"><div class="action-num">3</div><div><strong>Meet with USDA Rural Development</strong> Kansas office (Topeka) — discuss Community Facilities and Section 515 programs. Herington (pop. 2,400), Hope, White City, and Abilene all qualify as rural.</div></div>
+      <div class="action-step"><div class="action-num">4</div><div><strong>Contact Municipalities</strong> (Herington, Abilene, Emporia, Junction City) about partnering on CDBG applications. Nonprofits apply through city government partners.</div></div>
+      <div class="action-step"><div class="action-num">5</div><div><strong>Engage a LIHTC Consultant</strong> — evaluate feasibility of tax credit deals for Abilene church-to-housing conversion and Herington housing portfolio. Can generate $500K–$2M+ equity.</div></div>
+      <div class="action-step"><div class="action-num">6</div><div><strong>Apply for Community Service Tax Credit CDO Status</strong> — enables 70% state tax credits for donors, supercharging private fundraising.</div></div>
+      <div class="action-step"><div class="action-num">7</div><div><strong>Register as MCCYN Provider Pathway</strong> — positions Abilene daycare for military childcare subsidies ($2,000/mo vs standard $800/mo per child).</div></div>
+
+      <!-- Grant Details by Category -->
+      <div class="section-header" style="text-align:left;margin-top:48px;">
+        <div class="section-label">Kansas State Grants</div>
+        <h2>State Programs</h2>
+      </div>
+
+      <div class="grant-card">
+        <h3><i class="fas fa-home" style="color:#059669;margin-right:6px;"></i> Kansas Housing Resources Corp (KHRC)</h3>
+        <div class="agency">State Housing Finance Agency</div>
+        <span class="amount">HOME: $300K–$500K</span>
+        <span class="amount">Housing Trust Fund: $200K–$600K</span>
+        <p>Nonprofits with CHDO designation receive set-aside funds (15% of state HOME allocation). Housing Trust Fund targets extremely low-income housing (30% AMI). ESG grants $25K–$100K for homelessness prevention.</p>
+        <div class="targets"><strong>Best for:</strong> Herington houses → affordable rentals, Abilene church → housing units, Ogden/JC military housing. <strong>Deadline:</strong> Annual NOFA in spring (Mar–May).</div>
+      </div>
+
+      <div class="grant-card">
+        <h3><i class="fas fa-child" style="color:#059669;margin-right:6px;"></i> Kansas Children's Cabinet & Trust Fund</h3>
+        <div class="agency">State Agency — Early Childhood</div>
+        <span class="amount">$10K–$250K</span>
+        <p>Funds early childhood programs, childcare infrastructure, and family support for ages 0–5. The Abilene 17,768 sqft former daycare is a strong candidate — addresses Kansas childcare desert in rural counties.</p>
+        <div class="targets"><strong>Best for:</strong> Abilene Campus childcare center. <strong>Deadline:</strong> Typically spring applications.</div>
+      </div>
+
+      <div class="grant-card">
+        <h3><i class="fas fa-heartbeat" style="color:#059669;margin-right:6px;"></i> Kansas Health Foundation</h3>
+        <div class="agency">Private Foundation — Wichita</div>
+        <span class="amount">$25K–$500K+</span>
+        <p>Funds health equity, healthy communities, civic health. "Healthy Communities" initiative aligns with community development in underserved rural areas like Herington and Hope. Rolling; invitation-based for larger grants.</p>
+        <div class="targets"><strong>Best for:</strong> Community wellness spaces, childcare (social determinants of health), affordable housing as health infrastructure.</div>
+      </div>
+
+      <div class="section-header" style="text-align:left;margin-top:48px;">
+        <div class="section-label">Federal Programs</div>
+        <h2>Federal Grants & Tax Credits</h2>
+      </div>
+
+      <div class="grant-card federal">
+        <h3><i class="fas fa-flag-usa" style="color:#2563eb;margin-right:6px;"></i> USDA Rural Development</h3>
+        <div class="agency">USDA Kansas State Office — Topeka</div>
+        <span class="amount">Community Facilities: $50K–$2M+</span>
+        <span class="amount">Sec 515 Rental: $100K–$1M+</span>
+        <p>High-poverty areas like Herington qualify for up to 75% grant funding. Community Facilities program funds essential community facilities. Section 515 provides below-market loans for affordable rental housing. Applications accepted on rolling basis.</p>
+        <div class="targets"><strong>Best for:</strong> Hope community building, Abilene daycare, Herington commercial-to-community conversions. All qualifying rural communities (pop. under 20K).</div>
+      </div>
+
+      <div class="grant-card federal">
+        <h3><i class="fas fa-city" style="color:#2563eb;margin-right:6px;"></i> HUD CDBG (Small Cities)</h3>
+        <div class="agency">Kansas Dept of Commerce administers</div>
+        <span class="amount">$250K–$500K</span>
+        <p>Kansas receives ~$12–15M annually. Activities must benefit low/moderate-income persons (51%+). Nonprofits partner with municipalities to apply. Categories: housing rehab, public facilities, economic development.</p>
+        <div class="targets"><strong>Best for:</strong> Herington housing rehabilitation (12 properties), Hope community building, Emporia downtown. <strong>Deadline:</strong> Late spring/early summer annually.</div>
+      </div>
+
+      <div class="grant-card federal">
+        <h3><i class="fas fa-receipt" style="color:#2563eb;margin-right:6px;"></i> Historic Tax Credits (Federal + State)</h3>
+        <div class="agency">National Park Service + Kansas Historical Society</div>
+        <span class="amount">Federal: 20% of rehab costs</span>
+        <span class="amount">Kansas: 25% of rehab costs</span>
+        <p>For properties on or eligible for the National Register. Combined 45% back on qualified rehabilitation. Nonprofits syndicate credits to investors for cash equity. Applications rolling — Part 1/2 before construction, Part 3 after.</p>
+        <div class="targets"><strong>Best for:</strong> Emporia downtown (historic district), Hutchinson Victorian (1894), Junction City limestone church (1942), Abilene former church (1916).</div>
+      </div>
+
+      <div class="grant-card federal">
+        <h3><i class="fas fa-building" style="color:#2563eb;margin-right:6px;"></i> Low-Income Housing Tax Credits (LIHTC)</h3>
+        <div class="agency">KHRC allocates federal credits</div>
+        <span class="amount">$500K–$2M+ equity</span>
+        <p>Potentially the largest funding source. 9% credits generate ~70% of development costs as equity. Rural projects, historic properties, and nonprofits score competitively. Can combine with Historic Tax Credits for dual-credit deals. Requires experienced LIHTC development partner.</p>
+        <div class="targets"><strong>Best for:</strong> Abilene church → affordable apartments (adaptive reuse), Herington houses as rental portfolio. <strong>Deadline:</strong> 1-2 rounds/year, typically spring.</div>
+      </div>
+
+      <div class="section-header" style="text-align:left;margin-top:48px;">
+        <div class="section-label">Military & Historic</div>
+        <h2>Military & Preservation Programs</h2>
+      </div>
+
+      <div class="grant-card military">
+        <h3><i class="fas fa-shield-halved" style="color:#7c3aed;margin-right:6px;"></i> OLDCC (Dept of Defense)</h3>
+        <div class="agency">Office of Local Defense Community Cooperation</div>
+        <span class="amount">$100K–$5M+</span>
+        <p>Community infrastructure supporting military installations. Geary County (Junction City) and Riley County (Manhattan, Ogden) qualify as Fort Riley-adjacent. Partner with local governments or Flint Hills Regional Council to apply.</p>
+        <div class="targets"><strong>Best for:</strong> Junction City church → veteran center, Ogden housing, Manhattan workforce housing for military families.</div>
+      </div>
+
+      <div class="grant-card military">
+        <h3><i class="fas fa-baby" style="color:#7c3aed;margin-right:6px;"></i> MCCYN Military Childcare</h3>
+        <div class="agency">DoD / Child Care Aware of America</div>
+        <span class="amount">$2,000/mo per child (vs $800 standard)</span>
+        <p>Fee assistance for military families using civilian childcare. Becoming MCCYN-eligible guarantees premium revenue stream. Strengthens business case for childcare facility grants from other sources.</p>
+        <div class="targets"><strong>Best for:</strong> Abilene Campus childcare center serving Fort Riley families. 150+ child capacity = potential $1.5M–$2M annual revenue.</div>
+      </div>
+
+      <div class="grant-card historic">
+        <h3><i class="fas fa-landmark" style="color:#d97706;margin-right:6px;"></i> Kansas Heritage Trust Fund</h3>
+        <div class="agency">Kansas Historical Society / SHPO</div>
+        <span class="amount">$5K–$90K (50% match)</span>
+        <p>Matching grants for National Register-listed properties. Also CLG grants ($5K–$25K) through certified local governments. Heritage Trust Fund applications typically due in October.</p>
+        <div class="targets"><strong>Best for:</strong> Initial preservation work on Hutchinson Victorian, Junction City church, Emporia downtown facade.</div>
+      </div>
+
+      <div class="section-header" style="text-align:left;margin-top:48px;">
+        <div class="section-label">Community & Foundation</div>
+        <h2>Community Development & Foundations</h2>
+      </div>
+
+      <div class="grant-card">
+        <h3><i class="fas fa-store" style="color:#059669;margin-right:6px;"></i> Emporia Main Street Programs</h3>
+        <div class="agency">Emporia Main Street / Kansas Dept of Commerce</div>
+        <span class="amount">IWW: $500–$5K</span>
+        <span class="amount">ROOMS: $5K–$25K</span>
+        <span class="amount">State Main Street: $5K–$50K</span>
+        <p>IWW (facade improvements), ROOMS (upper-floor housing), and state matching grants for downtown buildings in Main Street districts.</p>
+        <div class="targets"><strong>Best for:</strong> Emporia 511 Commercial St — facade restoration, upper-floor housing development, commercial space rehab.</div>
+      </div>
+
+      <div class="grant-card foundation">
+        <h3><i class="fas fa-sun" style="color:#dc2626;margin-right:6px;"></i> Sunflower Foundation</h3>
+        <div class="agency">Topeka — formerly BCBS of Kansas Foundation</div>
+        <span class="amount">$10K–$200K+</span>
+        <p>Focuses on health and wellness in Kansas. HEAL grants, capacity-building, community health initiatives. Frame affordable housing and childcare as social determinants of health.</p>
+        <div class="targets"><strong>Best for:</strong> Abilene daycare conversion, Hope community building wellness programs, Herington community health infrastructure.</div>
+      </div>
+
+      <div class="grant-card">
+        <h3><i class="fas fa-hand-holding-dollar" style="color:#059669;margin-right:6px;"></i> Community Service Tax Credit (CDO)</h3>
+        <div class="agency">Kansas Dept of Commerce</div>
+        <span class="amount">70% tax credit for donors</span>
+        <p>Becoming an approved Community Development Organization (CDO) allows donors to receive 70% state tax credits on contributions. Dramatically enhances private fundraising capability.</p>
+        <div class="targets"><strong>Best for:</strong> All properties — enables private capital raising for the entire portfolio.</div>
+      </div>
+
+      <div style="background:#ecfdf5;border:1px solid #d1fae5;border-radius:12px;padding:24px;margin-top:32px;">
+        <h3 style="color:#065f46;margin-bottom:12px;"><i class="fas fa-calculator" style="margin-right:6px;"></i> Total Potential Funding</h3>
+        <p style="font-size:2rem;font-weight:800;color:#047857;margin-bottom:8px;">$2M – $8M+</p>
+        <p style="color:#065f46;font-size:0.9rem;">Combined grants, tax credits, and low-interest financing across all tiers. LIHTC deals alone can generate $500K–$2M+ in equity for affordable housing conversion projects.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 Peterpan Corp. All rights reserved. | <a href="/" style="color:#94a3b8;">peterpan.net</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

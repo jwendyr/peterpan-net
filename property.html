@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Property Details — Peterpan Corp</title>
+  <meta name="description" id="pageDesc" content="View property details from the Peterpan Corp affordable housing portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+        <div class="logo-text">Peterpan Corp.<span>Nonprofit &bull; Est. Kansas</span></div>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/properties.html" class="active">Properties</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>/</span>
+      <a href="/properties.html">Properties</a><span>/</span>
+      <span id="breadcrumbTitle">Property</span>
+    </div>
+  </div>
+
+  <!-- Property Hero Image -->
+  <div class="property-hero" id="propertyHero">
+    <img id="heroImage" src="" alt="">
+    <div class="property-hero-overlay">
+      <div class="container">
+        <h1 id="heroTitle"></h1>
+        <p id="heroSubtitle"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Content -->
+  <div class="container">
+    <div class="property-content">
+
+      <!-- Main Content -->
+      <div class="property-main">
+
+        <!-- Address Bar -->
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap;">
+          <span id="typeBadge" class="card-badge" style="position:static;font-size:0.78rem;"></span>
+          <span id="statusBadge" class="card-badge" style="position:static;background:var(--slate-700);font-size:0.78rem;"></span>
+          <span id="fullAddress" style="font-size:0.95rem;color:var(--slate-600);margin-left:auto;">
+            <i class="fas fa-map-marker-alt" style="color:var(--green-600);"></i>
+          </span>
+        </div>
+
+        <!-- Description -->
+        <h2><i class="fas fa-file-alt" style="color:var(--green-600);margin-right:8px;font-size:1.2rem;"></i> Property Overview</h2>
+        <p id="description"></p>
+
+        <!-- Mission -->
+        <div class="mission-box" id="missionBox">
+          <h4><i class="fas fa-heart" style="margin-right:6px;"></i> Community Mission</h4>
+          <p id="missionText"></p>
+        </div>
+
+        <!-- Features -->
+        <h2><i class="fas fa-list-check" style="color:var(--green-600);margin-right:8px;font-size:1.2rem;"></i> Property Features</h2>
+        <ul class="feature-list" id="featureList"></ul>
+
+        <!-- Financial Details (Zillow-style) -->
+        <h2 style="margin-top:32px;"><i class="fas fa-chart-line" style="color:var(--green-600);margin-right:8px;font-size:1.2rem;"></i> Property & Tax Details</h2>
+        <table class="data-table" id="financialTable">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody id="financialBody"></tbody>
+        </table>
+
+        <!-- Legal Description -->
+        <div style="margin-top:24px;padding:16px;background:var(--slate-100);border-radius:var(--radius);font-size:0.85rem;">
+          <strong style="color:var(--slate-700);">Legal Description:</strong>
+          <span id="legalDesc" style="color:var(--slate-600);"></span>
+        </div>
+
+        <!-- Development Strategy -->
+        <h2 style="margin-top:32px;"><i class="fas fa-rocket" style="color:var(--green-600);margin-right:8px;font-size:1.2rem;"></i> Development Strategy</h2>
+        <div id="strategySection" style="margin-top:16px;"></div>
+
+        <!-- Map -->
+        <h2 style="margin-top:32px;"><i class="fas fa-map" style="color:var(--green-600);margin-right:8px;font-size:1.2rem;"></i> Location</h2>
+        <div class="map-container" id="mapContainer"></div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="property-sidebar">
+
+        <!-- Value Card -->
+        <div class="sidebar-card">
+          <h4><i class="fas fa-tag" style="color:var(--green-600);margin-right:6px;"></i> Estimated Value</h4>
+          <div class="value-display">
+            <div class="amount" id="estimatedValue"></div>
+            <div class="label">Market Estimate</div>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="label">Purchase Price</div>
+              <div class="value" id="purchasePrice"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Tax Assessed</div>
+              <div class="value" id="taxAssessed"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Annual Tax</div>
+              <div class="value" id="annualTax"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Equity Spread</div>
+              <div class="value" id="equitySpread" style="color:var(--green-700);"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Specs -->
+        <div class="sidebar-card">
+          <h4><i class="fas fa-ruler-combined" style="color:var(--green-600);margin-right:6px;"></i> Property Details</h4>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="label">Building</div>
+              <div class="value" id="buildingSqft"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Lot Size</div>
+              <div class="value" id="landSqft"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Year Built</div>
+              <div class="value" id="yearBuilt"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">County</div>
+              <div class="value" id="county"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price per sqft -->
+        <div class="sidebar-card">
+          <h4><i class="fas fa-calculator" style="color:var(--green-600);margin-right:6px;"></i> Value Metrics</h4>
+          <div class="detail-grid">
+            <div class="detail-item">
+              <div class="label">Price / SqFt</div>
+              <div class="value" id="pricePerSqft"></div>
+            </div>
+            <div class="detail-item">
+              <div class="label">Tax / Month</div>
+              <div class="value" id="taxMonthly"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="sidebar-card" style="background:var(--green-50);border:1px solid var(--green-100);">
+          <h4 style="color:var(--green-800);border-color:var(--green-200);"><i class="fas fa-envelope" style="margin-right:6px;"></i> Interested?</h4>
+          <p style="font-size:0.9rem;color:var(--green-700);margin-bottom:16px;">Contact us about this property for rental inquiries, community partnership, or volunteer opportunities.</p>
+          <a href="/contact.html" class="btn btn-green" style="width:100%;justify-content:center;">
+            <i class="fas fa-paper-plane"></i> Contact Us
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Neighborhood Data -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Neighborhood</div>
+        <h2>Community Profile</h2>
+        <p>Demographics, schools, housing market, economy, and livability data for this area.</p>
+      </div>
+      <div id="neighborhoodSection"></div>
+    </div>
+  </section>
+
+  <!-- Eligible Grants & Funding -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Funding Opportunities</div>
+        <h2>Eligible Grants & Programs</h2>
+        <p>Click any grant to see full details, requirements, deadlines, and application steps.</p>
+      </div>
+      <div id="grantsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;"></div>
+    </div>
+  </section>
+
+  <!-- Grant Modal -->
+  <div id="grantModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:200;overflow-y:auto;padding:40px 20px;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="max-width:700px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+      <div id="modalHeader" style="padding:24px 32px;color:#fff;">
+        <div style="display:flex;justify-content:space-between;align-items:start;">
+          <div>
+            <div id="modalType" style="font-size:0.72rem;text-transform:uppercase;letter-spacing:1.5px;opacity:0.8;margin-bottom:6px;"></div>
+            <h2 id="modalTitle" style="color:#fff;font-size:1.4rem;margin-bottom:4px;"></h2>
+            <div id="modalAgency" style="font-size:0.85rem;opacity:0.7;"></div>
+          </div>
+          <button onclick="document.getElementById('grantModal').style.display='none'" style="background:rgba(255,255,255,0.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:16px;">&times;</button>
+        </div>
+      </div>
+      <div style="padding:24px 32px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px;">
+          <div style="background:#f1f5f9;padding:12px;border-radius:8px;">
+            <div style="font-size:0.7rem;text-transform:uppercase;color:#64748b;letter-spacing:0.5px;">Funding Amount</div>
+            <div id="modalAmount" style="font-size:1rem;font-weight:700;color:#0f172a;margin-top:2px;"></div>
+          </div>
+          <div style="background:#f1f5f9;padding:12px;border-radius:8px;">
+            <div style="font-size:0.7rem;text-transform:uppercase;color:#64748b;letter-spacing:0.5px;">Match Required</div>
+            <div id="modalMatch" style="font-size:1rem;font-weight:700;color:#0f172a;margin-top:2px;"></div>
+          </div>
+          <div style="background:#f1f5f9;padding:12px;border-radius:8px;">
+            <div style="font-size:0.7rem;text-transform:uppercase;color:#64748b;letter-spacing:0.5px;">Deadline</div>
+            <div id="modalDeadline" style="font-size:0.9rem;font-weight:600;color:#0f172a;margin-top:2px;"></div>
+          </div>
+          <div style="background:#f1f5f9;padding:12px;border-radius:8px;">
+            <div style="font-size:0.7rem;text-transform:uppercase;color:#64748b;letter-spacing:0.5px;">Cycle</div>
+            <div id="modalCycle" style="font-size:0.9rem;font-weight:600;color:#0f172a;margin-top:2px;"></div>
+          </div>
+        </div>
+        <p id="modalSummary" style="font-size:0.95rem;line-height:1.7;color:#475569;margin-bottom:24px;"></p>
+
+        <h3 style="font-size:1rem;margin-bottom:12px;color:#0f172a;"><i class="fas fa-clipboard-check" style="color:#059669;margin-right:6px;"></i> Requirements</h3>
+        <ul id="modalReqs" style="list-style:none;padding:0;margin-bottom:24px;"></ul>
+
+        <h3 style="font-size:1rem;margin-bottom:12px;color:#0f172a;"><i class="fas fa-route" style="color:#2563eb;margin-right:6px;"></i> Application Steps</h3>
+        <ol id="modalSteps" style="padding-left:20px;margin-bottom:24px;"></ol>
+
+        <h3 style="font-size:1rem;margin-bottom:12px;color:#0f172a;"><i class="fas fa-circle-question" style="color:#d97706;margin-right:6px;"></i> FAQ</h3>
+        <div id="modalFaq" style="margin-bottom:24px;"></div>
+
+        <a id="modalUrl" href="#" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;justify-content:center;margin-top:8px;">
+          <i class="fas fa-external-link-alt"></i> Visit Program Website
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Similar Properties -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Explore More</div>
+        <h2>Similar Properties</h2>
+      </div>
+      <div class="property-grid" id="similarGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:4px;">
+            <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+            <div class="logo-text" style="color:white;">Peterpan Corp.<span>Kansas 501(c)(3) Nonprofit</span></div>
+          </div>
+          <p>Dedicated to affordable housing and community development across rural Kansas. EIN: 39-2394084.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@peterpan.net">info@peterpan.net</a></li>
+            <li>6 S Broadway St</li>
+            <li>Herington, KS 67449</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Peterpan Corp. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="/js/properties.js"></script>
+  <script src="/js/grants.js"></script>
+  <script src="/js/neighborhoods.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/property-detail.js"></script>
+  <script>
+  // Render eligible grants for this property
+  (function() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (!id) return;
+    const grantIds = PROPERTY_GRANTS[id] || [];
+    const grid = document.getElementById('grantsGrid');
+    if (!grid || grantIds.length === 0) return;
+
+    grantIds.forEach(gid => {
+      const g = GRANTS[gid];
+      if (!g) return;
+      const t = GRANT_TYPES[g.type] || GRANT_TYPES.state;
+      const card = document.createElement('div');
+      card.style.cssText = 'background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06);cursor:pointer;transition:all 0.2s;border-left:4px solid ' + t.color;
+      card.onmouseenter = function(){ this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.1)'; };
+      card.onmouseleave = function(){ this.style.transform='none'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.06)'; };
+      card.onclick = function(){ openGrantModal(gid); };
+      card.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">' +
+        '<h4 style="font-family:Inter,sans-serif;font-size:0.95rem;color:#0f172a;margin:0;">' + g.name + '</h4>' +
+        '<span style="background:' + t.bg + ';color:' + t.color + ';padding:2px 8px;border-radius:100px;font-size:0.68rem;font-weight:600;text-transform:uppercase;white-space:nowrap;">' + t.label + '</span></div>' +
+        '<div style="font-size:0.78rem;color:#64748b;margin-bottom:8px;">' + g.agency + '</div>' +
+        '<div style="font-size:0.88rem;font-weight:700;color:' + t.color + ';">' + g.amount + '</div>' +
+        '<div style="font-size:0.75rem;color:#94a3b8;margin-top:6px;"><i class="fas fa-clock" style="margin-right:4px;"></i>' + g.cycle + ' &bull; <i class="fas fa-arrow-right" style="margin-left:4px;margin-right:4px;"></i>Click for details</div>';
+      grid.appendChild(card);
+    });
+  })();
+
+  function openGrantModal(gid) {
+    const g = GRANTS[gid];
+    if (!g) return;
+    const t = GRANT_TYPES[g.type] || GRANT_TYPES.state;
+    const modal = document.getElementById('grantModal');
+    document.getElementById('modalHeader').style.background = 'linear-gradient(135deg, ' + t.color + ', ' + t.color + 'cc)';
+    document.getElementById('modalType').textContent = t.label + ' Program';
+    document.getElementById('modalTitle').textContent = g.name;
+    document.getElementById('modalAgency').textContent = g.agency;
+    document.getElementById('modalAmount').textContent = g.amount;
+    document.getElementById('modalMatch').textContent = g.match;
+    document.getElementById('modalDeadline').textContent = g.deadline;
+    document.getElementById('modalCycle').textContent = g.cycle;
+    document.getElementById('modalSummary').textContent = g.summary;
+    document.getElementById('modalUrl').href = g.url;
+
+    const reqs = document.getElementById('modalReqs');
+    reqs.innerHTML = '';
+    g.requirements.forEach(r => {
+      const li = document.createElement('li');
+      li.style.cssText = 'padding:6px 0;border-bottom:1px solid #f1f5f9;font-size:0.88rem;color:#475569;display:flex;gap:8px;';
+      li.innerHTML = '<span style="color:' + t.color + ';font-weight:700;">&#10003;</span> ' + r;
+      reqs.appendChild(li);
+    });
+
+    const steps = document.getElementById('modalSteps');
+    steps.innerHTML = '';
+    g.steps.forEach(s => {
+      const li = document.createElement('li');
+      li.style.cssText = 'padding:6px 0;font-size:0.88rem;color:#475569;';
+      li.textContent = s.replace(/^Step \d+:\s*/, '');
+      steps.appendChild(li);
+    });
+
+    const faq = document.getElementById('modalFaq');
+    faq.innerHTML = '';
+    g.faq.forEach(f => {
+      const div = document.createElement('div');
+      div.style.cssText = 'margin-bottom:12px;padding:12px;background:#f8fafc;border-radius:8px;';
+      div.innerHTML = '<div style="font-weight:600;font-size:0.88rem;color:#0f172a;margin-bottom:4px;">Q: ' + f.q + '</div>' +
+        '<div style="font-size:0.85rem;color:#475569;line-height:1.6;">A: ' + f.a + '</div>';
+      faq.appendChild(div);
+    });
+
+    modal.style.display = 'block';
+    modal.scrollTop = 0;
+  }
+  </script>
+</body>
+</html>

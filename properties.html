@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Properties — Peterpan Corp | Affordable Housing Portfolio</title>
+  <meta name="description" content="Browse Peterpan Corp's portfolio of affordable housing, community centers, and event venues across rural Kansas. 19 properties in 7 counties.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+        <div class="logo-text">Peterpan Corp.<span>Nonprofit &bull; Est. Kansas</span></div>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/properties.html" class="active">Properties</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero" style="padding:48px 0 56px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-building"></i> Community Portfolio</div>
+        <h1>Our Properties</h1>
+        <p>Explore our portfolio of affordable housing, community facilities, and event venues serving rural Kansas. Each property is managed with a mission — providing accessible spaces that strengthen communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Stats -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid" id="statsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Properties Listing -->
+  <section class="section">
+    <div class="container">
+      <!-- Filters -->
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all">All Properties</button>
+        <button class="filter-btn" data-filter="housing">
+          <i class="fas fa-house"></i> Housing
+        </button>
+        <button class="filter-btn" data-filter="community">
+          <i class="fas fa-people-group"></i> Community
+        </button>
+        <button class="filter-btn" data-filter="mixed-use">
+          <i class="fas fa-store"></i> Mixed-Use
+        </button>
+        <button class="filter-btn" data-filter="events">
+          <i class="fas fa-calendar-check"></i> Events
+        </button>
+      </div>
+
+      <!-- Search -->
+      <div style="margin-bottom:24px;">
+        <input type="text" id="searchInput" placeholder="Search by address, city, or county..."
+          style="width:100%;max-width:400px;padding:12px 16px;border:1px solid var(--slate-300);border-radius:var(--radius);font-size:0.9rem;font-family:inherit;outline:none;transition:border var(--transition);"
+          onfocus="this.style.borderColor='var(--green-500)'" onblur="this.style.borderColor='var(--slate-300)'">
+      </div>
+
+      <!-- Property Grid -->
+      <div class="property-grid" id="propertyGrid"></div>
+
+      <p id="noResults" style="display:none;text-align:center;padding:60px 0;color:var(--slate-500);font-size:1.1rem;">
+        No properties match your search. <a href="#" onclick="resetFilters();return false;">Clear filters</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:4px;">
+            <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+            <div class="logo-text" style="color:white;">Peterpan Corp.<span>Kansas 501(c)(3) Nonprofit</span></div>
+          </div>
+          <p>Dedicated to affordable housing and community development across rural Kansas. EIN: 39-2394084.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@peterpan.net">info@peterpan.net</a></li>
+            <li>6 S Broadway St</li>
+            <li>Herington, KS 67449</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Peterpan Corp. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="/js/properties.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

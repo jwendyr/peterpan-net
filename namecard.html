@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Card — Wendy Tan | Peterpan Corp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #e2e8f0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 40px 20px; gap: 40px; }
+    h1 { font-family: 'Merriweather', serif; color: #0f172a; font-size: 20px; }
+    .subtitle { color: #64748b; font-size: 13px; margin-top: 4px; }
+
+    /* Standard business card: 3.5in x 2in = 336px x 192px at 96dpi, scaled 2x for print quality */
+    .card {
+      width: 672px;
+      height: 384px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── FRONT ── */
+    .card-front {
+      background: #ffffff;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      height: 100%;
+    }
+
+    .card-front-left {
+      background: linear-gradient(160deg, #064e3b 0%, #047857 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      position: relative;
+    }
+
+    .card-front-left::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+    }
+
+    .card-logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 16px;
+    }
+
+    .card-brand {
+      font-family: 'Merriweather', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .card-brand-sub {
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .card-front-right {
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-name {
+      font-family: 'Merriweather', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: #047857;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 24px;
+    }
+
+    .card-divider {
+      width: 36px;
+      height: 2px;
+      background: #d1fae5;
+      margin-bottom: 20px;
+    }
+
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card-info-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: #475569;
+    }
+
+    .card-info-row .icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #059669;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+
+    .card-info-row a {
+      color: #475569;
+      text-decoration: none;
+    }
+
+    /* ── BACK ── */
+    .card-back {
+      background: linear-gradient(160deg, #064e3b 0%, #047857 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-back::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .card-back-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .card-back-logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .card-back-name {
+      font-family: 'Merriweather', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .card-back-tagline {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 24px;
+    }
+
+    .card-back-line {
+      width: 48px;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      margin: 0 auto 20px;
+    }
+
+    .card-back-mission {
+      font-size: 11px;
+      color: rgba(255,255,255,0.65);
+      max-width: 360px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .card-back-website {
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 1px;
+    }
+
+    .card-back-ein {
+      font-size: 9px;
+      color: rgba(255,255,255,0.35);
+      margin-top: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .label { color: #94a3b8; font-size: 11px; margin-bottom: 8px; font-weight: 500; }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .card { box-shadow: none; border: 1px solid #e2e8f0; page-break-inside: avoid; margin-bottom: 20px; }
+      h1, .subtitle, .label { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <h1>Business Card — Peterpan Corp</h1>
+    <p class="subtitle">Print at 100% scale on standard 3.5" x 2" card stock</p>
+  </div>
+
+  <!-- FRONT -->
+  <div>
+    <div class="label">FRONT</div>
+    <div class="card">
+      <div class="card-front">
+        <div class="card-front-left">
+          <svg class="card-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="96" fill="rgba(255,255,255,0.12)"/>
+            <path d="M100,100 L100,38 L122,100 Z" fill="#fff"/>
+            <path d="M100,100 L100,162 L78,100 Z" fill="#fff"/>
+            <path d="M100,100 L38,100 L100,78 Z" fill="#fff"/>
+            <path d="M100,100 L162,100 L100,122 Z" fill="#fff"/>
+            <circle cx="100" cy="100" r="10" fill="#fff"/>
+            <circle cx="100" cy="100" r="5" fill="#064e3b"/>
+          </svg>
+          <div class="card-brand">Peterpan Corp.</div>
+          <div class="card-brand-sub">Nonprofit Organization</div>
+        </div>
+        <div class="card-front-right">
+          <div class="card-name">Wendy Tan</div>
+          <div class="card-title">Director &amp; President</div>
+          <div class="card-divider"></div>
+          <div class="card-info">
+            <div class="card-info-row">
+              <span class="icon">&#9993;</span>
+              <a href="mailto:wendy@peterpan.net">wendy@peterpan.net</a>
+            </div>
+            <div class="card-info-row">
+              <span class="icon">&#9742;</span>
+              <span>(785) 317-3912</span>
+            </div>
+            <div class="card-info-row">
+              <span class="icon">&#9673;</span>
+              <span>peterpan.net</span>
+            </div>
+            <div class="card-info-row">
+              <span class="icon">&#9873;</span>
+              <span>6 S Broadway St, Herington, KS 67449</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div>
+    <div class="label">BACK</div>
+    <div class="card">
+      <div class="card-back">
+        <div class="card-back-content">
+          <svg class="card-back-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100,100 L100,38 L122,100 Z" fill="rgba(255,255,255,0.9)"/>
+            <path d="M100,100 L100,162 L78,100 Z" fill="rgba(255,255,255,0.9)"/>
+            <path d="M100,100 L38,100 L100,78 Z" fill="rgba(255,255,255,0.9)"/>
+            <path d="M100,100 L162,100 L100,122 Z" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="100" cy="100" r="10" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="100" cy="100" r="5" fill="#047857"/>
+          </svg>
+          <div class="card-back-name">Peterpan Corp.</div>
+          <div class="card-back-tagline">Affordable Housing &bull; Community Development</div>
+          <div class="card-back-line"></div>
+          <div class="card-back-mission">Enhancing community well-being through affordable housing, historic preservation, and public service across rural Kansas.</div>
+          <div class="card-back-website">peterpan.net</div>
+          <div class="card-back-ein">501(c)(3) &bull; EIN 39-2394084 &bull; Kansas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

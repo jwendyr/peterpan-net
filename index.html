@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peterpan Corp — Affordable Housing & Community Development | Kansas Nonprofit</title>
+  <meta name="description" content="Peterpan Corp is a Kansas-based 501(c)(3) nonprofit dedicated to affordable housing, community development, and event management across rural Kansas communities.">
+  <meta property="og:title" content="Peterpan Corp — Affordable Housing & Community Development">
+  <meta property="og:description" content="Building stronger Kansas communities through affordable housing, adaptive reuse, and community programming.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peterpan.net">
+  <link rel="canonical" href="https://peterpan.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+        <div class="logo-text">
+          Peterpan Corp.
+          <span>Nonprofit &bull; Est. Kansas</span>
+        </div>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/properties.html">Properties</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/events.html">Events</a></li>
+          <li><a href="/contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-building"></i> 501(c)(3) Kansas Nonprofit &bull; EIN 39-2394084
+        </div>
+        <h1>Building Stronger Communities Through Affordable Housing</h1>
+        <p>Peterpan Corp preserves and revitalizes properties across rural Kansas — creating affordable homes, community gathering spaces, and economic opportunity where it's needed most.</p>
+        <div class="hero-buttons">
+          <a href="/properties.html" class="btn btn-primary">
+            <i class="fas fa-home"></i> View Our Properties
+          </a>
+          <a href="/about.html" class="btn btn-outline">
+            <i class="fas fa-heart"></i> Our Mission
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid" id="statsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Pillars -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Do</div>
+        <h2>Three Pillars of Community Impact</h2>
+        <p>Our work focuses on the interconnected needs of rural Kansas communities — housing, gathering spaces, and economic revitalization.</p>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card">
+          <div class="mission-icon"><i class="fas fa-house-chimney"></i></div>
+          <h3>Affordable Housing</h3>
+          <p>We acquire, rehabilitate, and maintain residential properties at below-market rates — ensuring Kansas workers, students, military families, and seniors have access to safe, dignified housing.</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon"><i class="fas fa-people-group"></i></div>
+          <h3>Community Spaces</h3>
+          <p>Historic buildings deserve new life. We convert underused structures into community centers, childcare facilities, and gathering spaces that serve as the social infrastructure small towns need.</p>
+        </div>
+        <div class="mission-card">
+          <div class="mission-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Events & Programming</h3>
+          <p>From affordable wedding venues to youth workshops and seasonal farmers markets, our event spaces bring communities together and generate revenue that funds our housing mission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Portfolio Highlights</div>
+        <h2>Featured Properties</h2>
+        <p>Explore our flagship community development projects across Kansas.</p>
+      </div>
+      <div class="property-grid" id="featuredGrid">
+        <!-- Populated by JS -->
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="/properties.html" class="btn btn-green">
+          <i class="fas fa-th-large"></i> View All Properties
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Reach</div>
+        <h2>Serving Rural Kansas Communities</h2>
+        <p>From Abilene to Manhattan, our portfolio spans 7 counties and 11 cities across the heartland.</p>
+      </div>
+      <div class="map-container" id="portfolioMap" style="height:450px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d400000!2d-96.85!3d38.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus"
+          style="width:100%;height:100%;border:0;border-radius:12px;"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Peterpan Corp Portfolio Map - Kansas"></iframe>
+      </div>
+      <div class="stats-grid" style="margin-top:32px">
+        <div class="stat-item">
+          <h3>7</h3>
+          <p>Kansas Counties</p>
+        </div>
+        <div class="stat-item">
+          <h3>11</h3>
+          <p>Cities Served</p>
+        </div>
+        <div class="stat-item">
+          <h3>$2.3M+</h3>
+          <p>Portfolio Value</p>
+        </div>
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Housing Units Planned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Events Preview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Get Involved</div>
+        <h2>Upcoming Events</h2>
+        <p>Join us at community events, volunteer days, and public programs.</p>
+      </div>
+      <div class="event-list" style="max-width:700px;margin:0 auto;">
+        <div class="event-card">
+          <div class="event-date">
+            <div class="month">APR</div>
+            <div class="day">12</div>
+          </div>
+          <div class="event-info">
+            <h3>Spring Community Clean-Up Day</h3>
+            <p>Join volunteers across Herington for our annual downtown and property beautification drive.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> Herington Downtown</span>
+              <span><i class="fas fa-clock"></i> 9:00 AM - 2:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="month">APR</div>
+            <div class="day">26</div>
+          </div>
+          <div class="event-info">
+            <h3>Affordable Housing Workshop</h3>
+            <p>Learn about homeownership programs, Section 8 options, and Peterpan Corp rental availability.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> 112 S Broadway, Herington</span>
+              <span><i class="fas fa-clock"></i> 6:00 PM - 8:00 PM</span>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <div class="month">MAY</div>
+            <div class="day">10</div>
+          </div>
+          <div class="event-info">
+            <h3>Abilene Campus Open House</h3>
+            <p>Tour the 17,000 sqft Abilene Campus and learn about our childcare center development plans.</p>
+            <div class="event-meta">
+              <span><i class="fas fa-map-pin"></i> 121 NE 5th St, Abilene</span>
+              <span><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;">
+        <a href="/events.html" class="btn btn-green"><i class="fas fa-calendar"></i> All Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="hero" style="padding:60px 0;">
+    <div class="container" style="text-align:center;">
+      <div style="position:relative;z-index:1;">
+        <h2 style="color:white;font-size:2rem;margin-bottom:12px;">Ready to Make a Difference?</h2>
+        <p style="color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto 28px;font-size:1.05rem;">Whether you want to volunteer, donate, or learn about available housing — we'd love to hear from you.</p>
+        <div class="hero-buttons" style="justify-content:center;">
+          <a href="/contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Us</a>
+          <a href="/properties.html" class="btn btn-outline"><i class="fas fa-search"></i> Browse Properties</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:4px;">
+            <img src="/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+            <div class="logo-text" style="color:white;">Peterpan Corp.<span>Kansas 501(c)(3) Nonprofit</span></div>
+          </div>
+          <p>Dedicated to enhancing community well-being through affordable housing, adaptive reuse of historic properties, and community programming across rural Kansas. EIN: 39-2394084.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/properties.html">Properties</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/events.html">Events</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Communities</h4>
+          <ul>
+            <li><a href="/properties.html#herington">Herington</a></li>
+            <li><a href="/properties.html#abilene">Abilene</a></li>
+            <li><a href="/properties.html#emporia">Emporia</a></li>
+            <li><a href="/properties.html#manhattan">Manhattan</a></li>
+            <li><a href="/properties.html#junction-city">Junction City</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@peterpan.net">info@peterpan.net</a></li>
+            <li>6 S Broadway St</li>
+            <li>Herington, KS 67449</li>
+            <li>EIN: 39-2394084</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Peterpan Corp. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="/js/properties.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
