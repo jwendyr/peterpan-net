@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community — Peterpan Corp | Join Our Movement</title>
+  <meta name="description" content="Join the Peterpan Corp community. Get updates on affordable housing, events, volunteer opportunities, and community development across Kansas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20">
+  <link rel="apple-touch-icon" href="https://cdn.peterpan.net/images/icon-192.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#064e3b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta property="og:title" content="Community — Peterpan Corp">
+  <meta property="og:description" content="Join our community and support affordable housing in Kansas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peterpan.net/fanclub">
+  <link rel="canonical" href="https://peterpan.net/fanclub">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="https://cdn.peterpan.net/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+        <div class="logo-text">Peterpan Corp.<span>Nonprofit &bull; Est. Kansas</span></div>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/properties">Properties</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+        <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:48px 0 56px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-users"></i> Community</div>
+        <h1>Join Our Community</h1>
+        <p>Stay connected with Peterpan Corp. Get updates on new properties, upcoming events, volunteer opportunities, and community milestones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:700px;">
+      <div class="breadcrumb"><a href="/">Home</a><span>/</span>Community</div>
+
+      <!-- Benefits -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 40px;">
+        <div style="background:var(--green-50);padding:20px;border-radius:var(--radius-lg);text-align:center;">
+          <i class="fas fa-bell" style="font-size:1.5rem;color:var(--green-700);margin-bottom:8px;"></i>
+          <h4 style="font-family:'Inter',sans-serif;font-size:0.95rem;margin-bottom:4px;">Property Alerts</h4>
+          <p style="font-size:0.8rem;color:var(--slate-500);">Be first to know about new affordable housing availability</p>
+        </div>
+        <div style="background:var(--amber-50);padding:20px;border-radius:var(--radius-lg);text-align:center;">
+          <i class="fas fa-calendar-check" style="font-size:1.5rem;color:var(--amber-600);margin-bottom:8px;"></i>
+          <h4 style="font-family:'Inter',sans-serif;font-size:0.95rem;margin-bottom:4px;">Event Invites</h4>
+          <p style="font-size:0.8rem;color:var(--slate-500);">Early access to community events and workshops</p>
+        </div>
+        <div style="background:var(--blue-100);padding:20px;border-radius:var(--radius-lg);text-align:center;">
+          <i class="fas fa-hands-helping" style="font-size:1.5rem;color:var(--blue-600);margin-bottom:8px;"></i>
+          <h4 style="font-family:'Inter',sans-serif;font-size:0.95rem;margin-bottom:4px;">Volunteer Calls</h4>
+          <p style="font-size:0.8rem;color:var(--slate-500);">Get notified when volunteer help is needed</p>
+        </div>
+        <div style="background:var(--slate-100);padding:20px;border-radius:var(--radius-lg);text-align:center;">
+          <i class="fas fa-chart-line" style="font-size:1.5rem;color:var(--slate-600);margin-bottom:8px;"></i>
+          <h4 style="font-family:'Inter',sans-serif;font-size:0.95rem;margin-bottom:4px;">Impact Updates</h4>
+          <p style="font-size:0.8rem;color:var(--slate-500);">Quarterly reports on how we're changing Kansas</p>
+        </div>
+      </div>
+
+      <!-- Signup Form -->
+      <h2 style="margin-bottom:20px;">Sign Up</h2>
+      <form action="https://formsubmit.co/info@peterpan.net" method="POST" id="fanclubForm" style="display:flex;flex-direction:column;gap:16px;">
+        <input type="hidden" name="_subject" value="New Community Member — Peterpan Corp">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://peterpan.net/fanclub?welcome=1">
+        <input type="text" name="_honey" style="display:none;">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--slate-700);margin-bottom:6px;">Name *</label>
+            <input type="text" name="name" required style="width:100%;padding:12px 16px;border:1px solid var(--slate-300);border-radius:var(--radius);font-size:0.95rem;font-family:inherit;">
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--slate-700);margin-bottom:6px;">Email *</label>
+            <input type="email" name="email" required style="width:100%;padding:12px 16px;border:1px solid var(--slate-300);border-radius:var(--radius);font-size:0.95rem;font-family:inherit;">
+          </div>
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--slate-700);margin-bottom:6px;">City / Community</label>
+          <input type="text" name="city" placeholder="e.g., Herington, Abilene, Manhattan..." style="width:100%;padding:12px 16px;border:1px solid var(--slate-300);border-radius:var(--radius);font-size:0.95rem;font-family:inherit;">
+        </div>
+
+        <div>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--slate-700);margin-bottom:6px;">Interests (check all that apply)</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <label style="display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--slate-600);cursor:pointer;">
+              <input type="checkbox" name="interests" value="housing"> Affordable Housing
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--slate-600);cursor:pointer;">
+              <input type="checkbox" name="interests" value="volunteer"> Volunteering
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--slate-600);cursor:pointer;">
+              <input type="checkbox" name="interests" value="events"> Community Events
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--slate-600);cursor:pointer;">
+              <input type="checkbox" name="interests" value="donate"> Donations & Grants
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px;">
+          <i class="fas fa-heart"></i> Join the Community
+        </button>
+      </form>
+
+      <!-- Welcome message -->
+      <div id="welcomeMsg" style="display:none;background:var(--green-50);border:2px solid var(--green-500);padding:32px;border-radius:var(--radius-lg);text-align:center;margin-top:24px;">
+        <i class="fas fa-check-circle" style="font-size:2.5rem;color:var(--green-600);margin-bottom:12px;"></i>
+        <h3 style="color:var(--green-800);margin-bottom:8px;">Welcome to the Community!</h3>
+        <p style="color:var(--green-700);">You're now part of the Peterpan Corp family. Watch your inbox for updates on properties, events, and volunteer opportunities.</p>
+      </div>
+
+      <p style="font-size:0.8rem;color:var(--slate-400);text-align:center;margin-top:24px;margin-bottom:48px;">We respect your privacy. Unsubscribe anytime. See our <a href="/privacy">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom:4px;">
+            <img src="https://cdn.peterpan.net/images/logo.svg?v=20" alt="Peterpan Corp" class="logo-icon" style="width:42px;height:42px;border-radius:50%;">
+            <div class="logo-text" style="color:white;">Peterpan Corp.<span>Kansas 501(c)(3) Nonprofit</span></div>
+          </div>
+          <p>Affordable housing and community development across rural Kansas. EIN: 39-2394084.</p>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="/properties">Properties</a></li><li><a href="/about">About</a></li><li><a href="/events">Events</a></li><li><a href="/contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Legal</h4><ul><li><a href="/terms">Terms & Conditions</a></li><li><a href="/privacy">Privacy Policy</a></li><li><a href="/bidding-policy">Bidding Policy</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:info@peterpan.net">info@peterpan.net</a></li><li>6 S Broadway St</li><li>Herington, KS 67449</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Peterpan Corp. All rights reserved.</span><div class="footer-legal"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/bidding-policy">Bidding</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+  <script src="/js/app.js"></script>
+  <nav class="bottom-nav" id="bottomNav">
+    <a href="/" class="bottom-nav-item" aria-label="Home"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg><span>Home</span></a>
+    <a href="/properties" class="bottom-nav-item" aria-label="Properties"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg><span>Properties</span></a>
+    <a href="/about" class="bottom-nav-item" aria-label="About"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg><span>About</span></a>
+    <a href="/events" class="bottom-nav-item" aria-label="Events"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><span>Events</span></a>
+    <a href="/contact" class="bottom-nav-item" aria-label="Contact"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>Contact</span></a>
+  </nav>
+  <script>
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');
+    document.querySelectorAll('.bottom-nav-item').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')===location.pathname);});
+    if(location.search.includes('welcome=1')){document.getElementById('welcomeMsg').style.display='block';document.getElementById('fanclubForm').style.display='none';}
+  </script>
+</body>
+</html>
