@@ -1,0 +1,10 @@
+/* TEAM */
+Organization: Peterpan Corp
+Location: Herington, Kansas, USA
+Contact: info@peterpan.net
+Website: https://peterpan.net
+
+/* SITE */
+Built with: HTML, CSS, JavaScript
+Hosted on: Cloudflare Pages
+Last updated: 2026-03-29
